@@ -1,0 +1,68 @@
+
+.mouth {
+	position: relative;
+}
+
+.mouth::after {
+	content: '';
+    background:#eb6667;
+    height: 5px;
+    border-radius: 20px;
+    bottom: 20px;
+    left: 30%;
+    width: 40%;
+    z-index: 1;
+    position: absolute;
+}
+
+.mouth input {
+	text-align: center;
+	border: 12px solid red;
+	border-radius: 6px 6px 40px 40px;
+	z-index: 1;
+	position: relative;
+	height: auto;
+	min-height: 28px;
+	background: #761f20;
+	color: transparent;
+	transition: height ease-in-out .2s;
+}
+
+.mouth input[type="text"]:focus {
+	height: 60px;
+	color: #fff;
+	outline: none;
+}
+
+.mouth.closed input {
+	height: 20px;
+	min-height: auto;
+}
+
+.teeth {
+	display: flex;
+	position: absolute;
+    left: 16px;
+    right: 16px;
+    z-index: 2;   
+}
+
+.teeth.top-teeth {
+	align-items: flex-start;
+	top: 12px;
+}
+
+.teeth.bottom-teeth {
+	align-items: flex-end;
+	bottom: 12px;
+	left: 40px;
+	right: 40px;
+	flex: none;
+}
+
+.tooth {
+	flex: 1;
+	height: 8px;
+	background: #fff;
+	border: 1px solid #761f20;
+}
